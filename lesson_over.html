@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/lesson_over.css">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<title>干货-课程-完成</title>
+</head>
+<body style="overflow:-Scroll;overflow-x:hidden" >
+	<!-- 模块一 即 上半部分 -->
+	<div class="model-1">
+		<div class="left"><a href="#"><img src="images/baiX.png" alt=""></a></div>
+		<div class="right"><img src="images/ico_fenxiangbai@3x.png" alt=""></div>
+		<div class="swiper-container-k">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="middle m-left">
+                	<h1>恭喜你完成了训练</h1>
+                	<ul>
+                		<li>
+        							<h2>5</h2>
+        							<p>组动作</p>
+                		</li>
+                		<li>
+        							<h2>12</h2>
+        							<p>分钟</p>
+                		</li>
+                		<li>
+                		  <h2>199</h2>
+						          <p>千卡</p>
+					         	</li>
+                	</ul>
+                	<h3>胸肌入门<span>2017年11月15日11:04:52</span></h3>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="middle m-right">
+                	<h1>胸肌入门</h1>
+                	<h3>胸肌入门<span>04:52</span></h3>
+                	<h3>胸肌入门<span>04:52</span></h3>
+                	<h3>胸肌入门<span>04:52</span></h3>
+                  <h3>胸肌入门<span>04:52</span></h3>
+                	<h3>胸肌入门<span>04:52</span></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- table导航点 -->
+    <div class="swiper-pagination-k">
+        <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+        <span class="swiper-pagination-bullet"></span>
+    </div> 
+	</div>
+	<!-- 底部模块 -->
+	<div class="model-2">
+		<p>训练感觉如何</p>
+		<!-- <p>感觉刚刚好</p> -->
+    <!-- 可拖拽进度条 -->
+  	<ul class="lanren">
+      <li><span id="title">0</span>
+        <div class="scale_panel">
+          <span class="f-left">吃力</span>
+          <span class="f-right">轻松</span>
+          <div class="scale" id="bar">
+            <div></div>
+            <span id="btn"></span>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <button>记录训练数据</button>
+	</div>
+
+  <!-- 分享模态框 -->
+  <div class="share">
+    <ul>
+      <li>
+        <img src="images/干货切图/ico_fivex@2x.png" alt="">
+        <span>Five动态</span>
+      </li>
+      <li>
+        <img src="images/干货切图/ico_weiixinx@2x.png" alt="">
+        <span>微信好友</span>
+      </li>
+      <li>
+        <img src="images/干货切图/ico_pyquanx@2x.png" alt="">
+        <span>朋友圈</span>
+      </li>
+      <li>
+        <img src="images/干货切图/ico_qqx@2x.png" alt="">
+        <span>QQ好友</span>
+      </li>
+      <li>
+        <img src="images/干货切图/ico_kongjianx@2x.png" alt="">
+        <span>QQ空间</span>
+      </li>
+      <li>
+        <img src="images/干货切图/ico_weibox@2x.png" alt="">
+        <span>微博</span>
+      </li>
+    </ul>
+  </div>
+  <script src="js/jquery-3.2.1.min.js"></script>
+	<script>
+		// 模块一 区域
+		var swiperK = new Swiper('.swiper-container-k', {
+        pagination: '.swiper-pagination-k',
+        slidesPerView: 1,//屏幕显示小div的个数
+        paginationClickable: true,
+        spaceBetween: 10,
+        // freeMode: true
+        });
+
+    // 进度条代码
+    var scale = function (btn,bar,title){
+      this.btn=document.getElementById(btn);
+      this.bar=document.getElementById(bar);
+      this.title=document.getElementById(title);
+      this.step=this.bar.getElementsByTagName("div")[0];
+      this.init();
+    };
+    scale.prototype={
+      init:function (){
+        var f=this,g=document,b=window,m=Math;
+        f.btn.ontouchstart=function (e){
+          var x=(e||b.event).touches[0].clientX;
+          var l=this.offsetLeft;
+          var max=f.bar.offsetWidth-this.offsetWidth;
+          g.ontouchmove=function (e){
+            var thisX=(e||b.event).touches[0].clientX;
+            var to=m.min(max,m.max(-2,l+(thisX-x)));
+            f.btn.style.left=to+'px';
+            f.ondrag(m.round(m.max(0,to/max)*100),to);
+            b.getSelection ? b.getSelection().removeAllRanges() : g.selection.empty();
+          };
+          g.ontouchend=new Function('this.onmousemove=null');
+        };
+      },
+      ondrag:function (pos,x){
+        this.step.style.width=Math.max(0,x)+'px';
+        this.title.innerHTML=pos+'%';
+      }
+    }
+    new scale('btn','bar','title');
+    // });
+    // 
+    // 分享模态框
+    $(".right").on("touchstart",function(){
+      $(".share").slideDown(0);
+      $(".share>ul").css("bottom",0);
+    })
+    $(".share").on("touchstart",function(){
+      $(".share").fadeOut(100);
+      $(".share>ul").css("bottom","-27%");
+    });
+	</script>
+</body>
+</html>

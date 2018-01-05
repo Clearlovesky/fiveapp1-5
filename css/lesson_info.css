@@ -1,0 +1,372 @@
+body{
+	background-color: #F2F2F2;
+}
+/* 模块一(头部视频) ----------------*/
+.model-1{
+	position: relative;
+}
+.model-1 .middle{
+	border-radius: 16px;
+	width: 81%;
+	position: absolute;
+	left: 9%;
+	top: 3.4rem;
+	color: #fff;
+}
+.model-1 .middle h1{
+	font-size: 1.5rem;
+	text-align: center;
+}
+.model-1 .m-left>ul>li{
+	width: 33.33333%;
+	height: 4rem;
+	float: left;
+	text-align: center;
+}
+.model-1 .m-left>ul>li>h2{
+	font-size: 1.2rem;
+	line-height: 2.5rem;
+	margin-top: 0.8rem;
+}
+.model-1 .m-left>ul>li>p{
+	font-size: 0.8rem;
+	color: #FFFFFF;
+}
+
+.video{
+	overflow: hidden;
+	height: 12rem;
+	position: relative;
+}
+.video .imgbgc{
+	width: 100%;height: 100%;
+}
+.video>span img{
+	width: 20px;
+	height: 22px;
+	margin: 0.4rem  0 0 0.6rem;
+}
+.v-left{
+	position: absolute;
+	top: 0.5rem;
+	left: 0.5rem;
+	height: 2.5rem;
+	width: 2.5rem;
+}
+.v-left>a>img{
+	margin: 0.5rem 0 0 0.5rem;
+}
+.v-left>a{
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+}
+.v-right{
+	position: absolute;
+	right: 0.5rem;
+	top: 0.5rem;
+	height: 2.5rem;
+	width: 2.5rem;
+}
+.video_info{
+	background-color: #fff;
+	padding: 14px 10px 34px 18px;
+	font-size:1rem;
+	position: relative;
+	color: #ABABAB;
+}
+.video_info>a{
+	position: absolute;
+	bottom: 10px;
+	left: 38%;
+	color: #FAED4D;
+}
+/* 模块二(动作视频)----------- */
+.model-2{
+	padding:15px;
+	overflow: hidden;
+	height: 9rem;
+	width: 100%;
+	margin-top: 0.3rem;
+	margin-bottom: 0.3rem;
+	background-color: #fff;
+}
+.model-2>h3{
+	font-weight: bold;
+	height: 1rem;
+	font-size: 1rem;
+	line-height: 1.2rem;
+	margin-bottom: 0.9rem;
+}
+.swiper-container-k .swiper-slide:nth-child(3n){
+	width: 30px !important;
+	height: 5.0rem;
+	background-color: #F2F2F2;
+	margin:4px 0.6rem 0 0rem !important;
+	border-radius: 5px;
+	font-size: 0.8rem;
+	text-align: center;
+}
+.swiper-container-k .swiper-slide:nth-child(3n)>p:nth-child(1){
+	margin-top: 1rem;
+	color: #9B9B9B;
+}
+.swiper-container-k .swiper-slide:nth-child(3n)>p:nth-child(2){
+	margin-top: 1rem;
+	color: #4A4A4A;
+}
+.swiper-container-k .swiper-slide{width: 42% !important}
+.swiper-container-k .swiper-slide img{
+	border: 1px solid #000;
+	border-radius: 6px;
+	width:100%;height: 5.4rem;
+}
+
+/* -- 模块三区域 三条独白 */
+.model-3{
+	background-color: #fff;
+}
+.model-3 ul li{
+	padding: 0 15px 0px 15px;
+	border-bottom: 1px solid #F2F2F2;
+}
+.model-3 ul li:first-child{
+	padding-top: 0.2rem;
+}
+.model-3 ul li h2{
+	font-weight: bold;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	width: 100%;
+	font-size: 1.2rem;
+	text-align: center;
+}
+.model-3 ul li p{
+	margin-bottom: 1rem;
+	font-size: 1rem;
+	color: #BBBBBB;
+}
+
+/* 模块四 区域 多少人正在努力训练 */
+/* .model-4{
+	margin-top: 2rem;
+} */
+.model-4 ul li{
+	width: 100%;
+	/* height: 16rem; */
+	background-color: #fff;
+	border-bottom: 1px solid #ccc;
+	padding: 15px;
+	font-size: 1rem;
+}
+.model-4 ul li:first-child{
+	height: 6.5rem;
+	position: relative;
+}
+/* 跳转的链接 右箭头 >*/
+.model-4 ul li:first-child>a{
+	position: absolute;
+	width: 3rem;
+	height: 2rem;
+	right: 0.3rem;
+	top: 2.6rem;
+	text-align: center;
+}
+.model-4 ul li:first-child>p:nth-child(2){
+	color: #BBBBBB;
+}
+.model-4 ul li:first-child>p:first-child{
+	font-size: 1.3rem;
+	margin-bottom: 0.5rem;
+}
+.model-4 ul li:first-child>p:first-child>span{
+	font-size: 1.8rem;
+}
+.model-4 ul li .left{
+	float: left;
+	width: 2.5rem;
+	height: 2.5rem;
+	border-radius: 50%;
+	margin-right: 0.5rem;
+	border: 1px solid #e0caca;
+	overflow: hidden;
+}
+.model-4 ul li .left>img{
+	width: 100%;
+	height: 100%;
+	
+}
+.model-4 ul li .middle{
+	float: left;
+	width: 70%;
+  background-color: #fff;
+}
+.model-4 ul li .middle>p{
+	margin: 0.7rem 0;
+}
+.model-4 ul li .middle>p:nth-child(2){
+	color: #BBBBBB;
+}
+
+/* 爱心点赞------------------------------------------- */
+.model-4 ul li .right{
+	float: right;
+	position: relative;
+}
+.heart {
+    background: url(../images/web_heart_animation.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    height: 55px;
+    width: 55px;
+    cursor: pointer;
+    position: absolute;
+    left:-36px;
+    top:-6px;
+    background-size:cover;
+}
+.heart:hover, .heart:focus{
+background-position: right;
+}
+
+@-webkit-keyframes heartBlast {
+0% {
+    background-position: left;
+}
+100% {
+    background-position: right;
+}
+}
+
+@keyframes heartBlast {
+    0% {
+    background-position: left;
+}
+100% {
+    background-position: right;
+}
+}
+.heartAnimation {
+display: inline-block;
+-webkit-animation-name: heartBlast;
+animation-name: heartBlast;
+-webkit-animation-duration: .8s;
+animation-duration: .8s;
+-webkit-animation-iteration-count: 1;
+animation-iteration-count: 1;
+-webkit-animation-timing-function: steps(28);
+animation-timing-function: steps(28);
+background-position: right;
+}
+.feed{ margin-bottom: :20px; height: 30px; position: relative;}
+.likeCount{ margin-top: 15px;margin-left: 7px;font-size: 13px;color: #999999}
+
+
+/* 模块五相关训练视频 */
+/* 课程列表 */
+.model-5 .list{
+	padding: 0 15px;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	
+}
+.model-5 .list>h1{
+	margin-top: 1rem;
+	margin-bottom: 0.8rem;
+	font-size: 1.4rem;
+}
+.model-5 .list>li:last-child{
+	margin-bottom: 3.4rem;
+}
+.model-5 .list>li{
+	width: 100%;
+	height: 9rem;
+	border-radius: 0.4rem;
+	background-color: pink;
+	margin-top: 0.5rem;
+		color: #fff;
+}
+.model-5 .one{
+	display: inline-block;
+	width: 85%;
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+	margin-left: 1.5rem;
+}
+.model-5 .two{
+	display: inline-block;
+	width: 85%;
+	font-size: 1rem;
+	margin-top: 0.5rem;
+	margin-left: 1.5rem;
+}
+.model-5 .three{
+	display: inline-block;
+	width: 85%;
+	font-size: 1rem;
+	margin-top: 1rem;
+	margin-left: 1.5rem;
+}
+
+
+/* 底部固定 栏 */
+.takein{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	height: 3rem;
+	line-height: 3rem;
+	width: 100%;
+	background-color: #F8E71C;
+	text-align: center;
+	font-size: 1.2rem;
+	
+}
+.takein>a{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+}
+/* 分享模态框 */
+.share{
+	width: 100%;
+	height: 100%;
+	background-color: #00000054;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	display: none;
+}
+.share>ul{
+	width: 100%;
+	height:32%;
+	background-color: #fff;
+	position: absolute;
+	bottom: -27%;
+	left: 0;
+	z-index: 100000;
+	transition:all 0.2s;
+}
+.share>ul>li{
+	width: 14%;
+	height: 25%;
+	float: left;
+	margin: 1.8rem 0rem 0 2rem;
+	text-align: center;
+}
+.share>ul>li>img{
+	height: 100%;
+}
+.share>ul>li>span{
+	font-size: 12px;
+	color: #393939;
+	font-family: "HelveticaNeue";
+}
+
+/* 视频 */
+figure{position: fixed;width: 100%;height: 100%;top: 0;left: 0;z-index: 10000000000000;display: none;}
+.close{position: absolute;top: 0.8rem;right: 2rem;display: inline-block;width: 2rem;height: 2rem ;z-index: 1000000;background-image: url(../images/ico_guanbihei@2x.png);-webkit-background-size: 100% 100%;
+background-size: 100% 100%;}

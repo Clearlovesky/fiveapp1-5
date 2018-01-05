@@ -1,0 +1,414 @@
+
+/* 头部搜索按钮 */
+.search{
+	position: fixed;
+	right: 0.6rem;
+	top: 0.68rem;
+	height: 1.6rem;
+	width: 1.8rem;
+	z-index: 100;
+	background-image: url(../images/camera.png);
+	background-size: 100% 100%;	
+}
+.swiper-container {
+    width: 100%;
+    /* height: 100%; */
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    /*display: flex;*/
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    /*-webkit-align-items: center;
+    align-items: center;*/
+}
+.swiper-container>.swiper-pagination{
+	  position: fixed;
+    top: 0;
+    height: 3rem;
+    width: 100%;
+    background-color: #fff;
+    text-align: left;
+}
+.swiper-container>.swiper-pagination>.swiper-pagination-bullet{
+    width: 19%;
+    height: 3rem;
+    text-align: center;
+    border-radius: 0;
+    font-size: 1.1rem;
+    line-height: 3rem;
+    color: #000;
+    opacity: 1;
+    background-color: transparent;
+}
+.swiper-container>.swiper-pagination>.swiper-pagination-bullet-active{
+    opacity: 1;
+    color: #F8E71C;
+    border-bottom: 4px solid yellow;
+}
+.swiper-container>.swiper-pagination>.swiper-pagination-bullet:nth-child(1){
+	margin-left: 19%;
+}
+.swiper-container>.swiper-pagination>.swiper-pagination-bullet:nth-child(1):before{/*在元素的内容之前插入新内容;*/
+    content:"热门";/*所插入的内容*/
+}
+.swiper-container>.swiper-pagination>.swiper-pagination-bullet:nth-child(2):before{
+    content:"关注";
+}
+.swiper-container>.swiper-pagination>.swiper-pagination-bullet:nth-child(3):before{
+    content:"附近";
+}
+
+
+
+/*第一屏 热门 ---------------start*/
+/* givemefive */
+.showplay{
+    background:rgba(242,242,242,1);
+    height: 100%;
+    width: 100%;
+}
+.showplay-0{
+	  padding: 0 12px;
+    height: 3rem;
+    width: 100%;
+    background-color: #fff;
+    margin-top: 3.3rem;
+    line-height: 3rem;
+}
+.showplay-0>span:nth-child(2){
+	font-size: 0.7rem;
+	color: #9B9B9B;
+}
+.showplay-1{
+	  overflow: hidden;
+	  background-color: #fff;
+	  padding: 0 12px;
+    height: 12rem;
+    width: 100%;
+}
+.swiper-container-h {
+	  
+    width: 100%;
+    height: 100%;
+    /* margin-top:3rem;  */
+    background-color: #fff;
+    position: relative;
+}
+.swiper-container-h>.swiper-wrapper{
+	  
+    width: 100%;
+    height: 100%;
+}
+.swiper-container-h>.swiper-wrapper>.swiper-slide{
+    /* background-color: #F8E71C; */
+    height: 12rem;
+    width: 100%;
+    position: relative;
+}
+.showplay-1 .swiper-container-h .swiper-slide>img{
+	width: 8rem;
+	height: 8rem;
+	border-radius: 6px;
+}
+.showplay-1 .img-info{
+	height: 2.6rem;
+	/* background-color: red; */
+	width: 100%;
+	position: absolute;
+	bottom: 11px;
+	left: 0;
+}
+.showplay-1 .img-info>.info-left{
+	width: 2.6rem;
+	border-radius: 50%;
+	height: 100%;
+	background-color: #F8E71C;
+	float: left;
+	/* background-image: url(../images/社区截图/pic_touxiang2@2x.png); */
+	-webkit-background-size: cover;
+	background-size: cover;
+	border: 1px solid #fff;
+}
+.showplay-1 .img-info>.info-left>img{
+	width: 100%;
+	height: 100%;
+}
+.showplay-1 .img-info>.info-right{
+	float: right;
+	width: 64%;
+	height: 100%;
+	
+}
+.showplay-1 .img-info>.info-right>p:nth-child(1){
+	  margin: 3px 0;
+    text-align: left;
+    font-size: 0.8rem;
+}
+.showplay-1 .img-info>.info-right>p:nth-child(2){
+	font-size: 0.4rem;
+	text-align: left;
+}
+
+/* Five精选------- */
+.showplay-2{
+	  padding: 0 12px;
+    height: 3rem;
+    width: 100%;
+    background-color: #fff;
+    margin-top: 0.4rem;
+}
+.showplay-2 span{
+    line-height: 3rem;
+}
+/* .showplay-2 a{
+    line-height: 3rem;
+    font-size: 0.6rem;
+} */
+
+/* Five精选列表栏-- */
+ul.showplay-3{
+	  padding: 0 12px;
+    height: 67rem;
+    width: 100%;
+    background-color: #fff !important;
+    text-align: left;
+    font-size: 0.8rem;
+}
+ul.showplay-3>li{
+	float: left;
+	width: 48%;
+	height: 15rem;
+	background-color: pink;
+	margin-bottom: 1rem;
+}
+ul.showplay-3>li:nth-child(2n+1){
+	margin-right: 4%;
+}
+.showplay-3 .top{
+	width: 100%;
+	height: 10rem;
+}
+.showplay-3 .top>img{
+	width: 100%;
+	height: 100%;
+	border-radius: 6px;
+}
+.showplay-3 .middle{
+	width: 100%;
+	height: 2.5rem;
+	margin-top: 0.4rem;
+}
+.showplay-3 .bottom{
+	width: 100%;
+	height: 2rem;
+	/* background-color: blue; */
+}
+.bottom .one{
+	width: 1.5rem;
+	height: 1.5rem;
+	background-color: #ccc;
+	float: left;
+	border-radius: 50%;
+	overflow: hidden;
+	margin-top: 0.3rem;
+}
+.bottom .one>img{
+	width: 100%;
+	height: 100%;
+
+}
+.bottom .two{
+	width: 51%;
+	height: 2rem;
+	float: left;
+	line-height: 2rem;
+	overflow: hidden;
+	color: #9B9B9B;
+}
+.bottom .three{
+	width: 34%;
+	height: 2rem;
+	float: right;
+	position: relative;
+}
+
+
+
+/*第一屏 热门 -----------------end */
+/*第二屏 关注 ---------------start*/
+.showplay1{
+    background:rgba(242,242,242,1);
+    height: 100%;
+    width: 100%;
+}
+.showplay1-1{
+    height: 12rem;
+    width: 100%;
+    background-color: pink;
+}
+.swiper-container-j {
+    width: 100%;
+    height: 100%;
+    margin-top:3rem; 
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+}
+.swiper-pagination-j{
+    position: absolute;
+    top: 10.2rem;
+    z-index: 100;
+}
+.swiper-pagination-j > .swiper-pagination-bullet-active{
+	background-color: #fff;
+}
+.swiper-container-j>.swiper-wrapper{
+    width: 100%;
+    height: 100%;
+}
+.swiper-container-j>.swiper-wrapper>.swiper-slide{
+    background-color: pink;
+    height: 12rem;
+    line-height: 12rem;
+    width: 100%;
+}
+
+/* 热门饮食和查看更多 */
+.showplay1-2{
+	  padding: 0 1rem;
+    height: 3rem;
+    width: 100%;
+    background-color: #fff;
+    margin-top: 0.7rem;
+}
+.showplay1-2 span{
+    line-height: 3rem;
+}
+.showplay1-2 a{
+    line-height: 3rem;
+    font-size: 0.6rem;
+}
+/* 热门饮食 */
+.swiper-container-k {
+    width: 100%;
+    /* height: 19.0rem;
+    margin-top:3.5rem;  */
+    background-color: pink;
+    overflow: hidden;
+}
+.swiper-container-k>.swiper-wrapper{
+    margin: 6px 15px;
+    height: 12.0rem;
+}
+.swiper-container-k>.swiper-wrapper>.swiper-slide{
+    background-color: #ccc;
+    height: 12rem;
+    margin-right: 10px;
+    position: relative;
+}
+
+.swiper-container-k>.swiper-wrapper>.swiper-slide>img{
+	width: 100%;
+	height: 132.308px;
+	background-color: #F8E71C;
+}
+.swiper-container-k>.swiper-wrapper>.swiper-slide>.info-img{
+	height: 2.6rem;
+	width: 100%;
+	background-color: #fff;
+	position: absolute;
+	bottom: 7px;
+	left: 0;
+}
+.info-img>.info-left{
+	width: 31%;
+	border-radius: 50%;
+	height: 100%;
+	background-color: #F8E71C;
+	float: left;
+	/* background-image: url(../images/6.bmp); */
+	-webkit-background-size: cover;
+	background-size: cover;
+	border: 1px solid #fff;
+}
+.info-img>.info-right{
+	float: right;
+	width: 69%;
+	height: 100%;
+	
+}
+.info-img>.info-right>p:nth-child(1){
+	margin: 2px 0;
+    text-align: left;
+    font-size: 0.8rem;
+    padding-left:0.7rem; 
+}
+.info-img>.info-right>p:nth-child(2){
+	font-size: 0.4rem;
+	text-align: left;
+    padding-left:0.7rem; 
+}
+/* 推荐饮食和查看更多 */
+.showplay1-3-1{
+	padding: 0 1rem;
+    height: 3rem;
+    width: 100%;
+    background-color: #fff;
+    margin-top: 0.7rem;
+}
+.showplay1-3-1 span{
+    line-height: 3rem;
+}
+.showplay1-3-1 a{
+    line-height: 3rem;
+    font-size: 0.6rem;
+}
+/* 热门美食列表栏 */
+ul.showplay1-4{
+    height: 100%;
+    width: 100%;
+    background-color:#fff;
+}
+ul.showplay1-4>li{
+    width: 93%;
+    height: 11rem;
+    background-color: aqua;
+    margin: 0 auto 10px auto;
+    border-radius: 5px;
+    position: relative;
+}
+ul.showplay1-4>li:last-child{
+	margin-bottom: 3.6rem;
+}
+/* 每个li 课程的信息 */
+ul.showplay1-4>li>div.information{
+	height: 5rem;
+	width: 53%;
+	position: absolute;
+	left: 5rem;
+	top: 3rem;
+	font-size: 1rem;
+}
+ul.showplay1-4>li>div.information p:nth-child(1){
+	font-size: 1.3rem;
+}
+ul.showplay1-4>li>div.information p:nth-child(2){
+	margin: 5px 0 15px 0;
+}
+
+
+/* footer------------- */
+.footer > a:nth-child(2) > div > span{
+	color: #F8E71C;
+}

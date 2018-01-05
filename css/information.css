@@ -1,0 +1,131 @@
+.left>a>img,.right>img{
+	margin-top: 0.8rem;
+}
+/* 主题内容 */
+.main{
+	padding: 3%;
+	width: 100%;
+	background-color: #fff;
+	margin-top: 3.3rem;
+}
+.main .info{
+	width: 100%;
+	height: 3rem;
+}
+.info-l{
+	border-radius: 50%;
+	width: 2.8rem;
+	height: 2.8rem;
+	background-color: #F8E71C;
+}
+.info-m{
+	width: 40%;
+	height: 3rem;
+	font-size: 1rem;
+	margin-left: 1rem;
+}
+.info-m p:nth-child(2){
+	font-size: 0.8rem;
+	margin-top: 0.2rem;
+	color: #ccc;
+}
+.info-r{
+	width: 5rem;
+	height: 3rem;
+	background-color: #fff;
+}
+.info-r>button{
+	height: 2rem;
+	width: 5rem;
+	font-size: 0.8rem;
+	border-radius: 2rem;
+	border: none;
+	outline: none;
+	background-color: #F8E71C;
+	/* margin-top: 1rem; */
+	color: #fff;
+}
+.main>h3{
+	height: 2rem;
+	line-height: 2rem;
+	font-size: 1rem;
+	margin-top: 1rem;s
+}
+.main>h4{
+	height: 2rem;
+	font-size: 1rem;
+	color: #898989;
+}
+.main>h4>span{
+	color: #F5E518;
+}
+.main>.content{
+	width: 100%;
+	margin-top: 0.5rem;
+	font-size: 0.9rem;
+	overflow: hidden;
+	color: #898989;
+}
+
+/* -- 评论模块 - */
+.pinglun{
+	background-color: #fff;
+	width: 100%;
+	margin-top: 1rem;
+}
+/* 多少人喜欢 加头像 */
+.pinglun>.one{
+	height: 3rem;
+	width: 100%;
+	background-color: #fff;
+	font-size: 1rem;
+	border-top: 3px solid #F2F2F2;
+}
+.pinglun>.one .one-l{
+	width: 45%;
+	height: 100%;
+	line-height: 3rem;
+	position: relative;
+	margin-left: 12%;
+	color: #ccc;
+}
+.pinglun>.one .one-l>em{
+	width: 1.3rem;
+	height: 1.2rem;
+	position: absolute;
+	background-image: url(../images/干货切图/ico_zanxiaohuang@3x.png);
+	-webkit-background-size: cover;
+	background-size: cover;
+	top: 0.85rem;
+	left: -19%;
+}
+.pinglun>.one .one-r{margin-right: 3%;}
+.pinglun>.one .one-r>a{
+	display: inline-block;
+	height: 2rem;
+	width: 2rem;
+	border-radius: 50%;
+	background-color: #ccc;
+	margin-top: 0.5rem;
+}
+
+.pinglun>.two{
+	height: 3rem;
+	line-height: 3rem;
+	width: 100%;
+	background-color: #fff;
+	border-top: 1px solid #F2F2F2;
+	font-size: 1rem;
+	border-bottom: 1px solid #F2F2F2;
+}
+.pinglun>.two>p{
+	display: inline-block;
+	margin-left: 3%;
+}
+/* 评论的列表 */
+.pinglun>.three>li{
+	height: 10rem;
+	width: 100%;
+	background-color: pink;
+	border-bottom: 1px solid #F2F2F2;
+}

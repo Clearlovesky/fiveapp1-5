@@ -1,0 +1,111 @@
+.player {
+	background-color: #fff;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	border-radius: 4px;
+	background: #000 url(../images/loading.gif) center/300px no-repeat;
+}
+
+video {
+	display: none;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.controls {
+	width: 100%;
+	height: 50px;
+	background-color: rgb(16, 16, 16);
+	border-radius: 4px;
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	z-index: 99;
+	opacity: 0.6;
+}
+
+.player:hover .controls {
+	opacity: 1;
+}
+
+/*播放/暂停*/
+.controls .switch {
+	display: block;
+	width: 20px;
+	height: 20px;
+	font-size: 20px;
+	color: #FFF;
+	position: absolute;
+	top: 15px;
+	left: 4%;
+	text-decoration: none;
+}
+
+/*全屏按钮*/
+.controls .expand {
+	display: block;
+	width: 20px;
+	height: 20px;
+	font-size: 20px;
+	color: #FFF;
+	position: absolute;
+	right: 3%;
+	top: 11px;
+	text-decoration: none;
+}
+
+/*进度条*/
+.progress {
+	width: 75%;
+	height: 10px;
+	border-radius: 10px;
+	overflow: hidden;
+	background-color: #555;
+	cursor: pointer;
+	position: absolute;
+	top: 20px;
+	left: 12%;
+}
+
+/*下载进度*/
+.progress .loaded {
+	width: 0;
+	height: 100%;
+	background-color: #999;
+}
+
+/*播放进度*/
+.progress .line {
+	width: 0;
+	height: 100%;
+	background-color: #FFF;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/**/
+.progress .bar {
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+}
+
+/*时间*/
+.timer {
+	height: 20px;
+	line-height: 20px;
+	position: absolute;
+	left: 12%;
+	top: 31px;
+	color: #FFF;
+	font-size: 14px;
+}

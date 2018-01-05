@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<title>干货-课程</title>
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/lesson.css">
+</head>
+<body>
+	<header>
+		<div class="left">
+			<a href="drysaltery.html"><img src="images/ico_back@3x.png" height="16"alt=""></a>
+		</div>
+		<div class="middle">全部课程</div>
+	</header>
+	<!--导航栏-->
+    <div class="nav">
+        <div class="navWrap">
+            <ul class="clearfix">
+                <li><a href='javascript:;'>不限类型</a></li>
+                <li><a href='javascript:;'>不限部位</a></li>
+                <li><a href='javascript:;'>不限器械</a></li>
+                <li><a href='javascript:;'>不限难度</a></li>
+            </ul>
+        </div>
+        <!--不限类型-->
+        <div class="shop shoping hide">
+            <ul></ul>
+        </div>
+        <!--不限部位-->
+        <div class="shop area hide">
+            <ul></ul>
+        </div>
+		    <!--不限器械-->
+        <div class="shop qixie hide">
+            <ul></ul>
+        </div>
+        <!--不限难度-->
+        <div class="shop nandu hide">
+            <ul></ul>
+        </div>
+    </div>
+	<!-- 视频教程列表 -->
+	<ul class="list2 products">
+		<!--<li>
+		  <div class="img"><img src="images/6.bmp" alt=""></div>
+			<p class="one">胸肌入门</p>
+			<p class="two">3分钟 初级</p>
+			<p class="three">66666 人已参加</p>
+		</li>-->
+	</ul>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/template.js"></script>
+	<script src="js/lesson_all.js"></script>
+	<!--不限类型-->
+	<script type="text/html" id="tplShoping">
+    {{each obj as item}}
+			<li class="clearfix" shopId="{{item.categoryID}}"><a href='javascript:;'>{{item.categoryType}}<span class="fr hide">✔</span></a></li>    
+		{{/each}}
+	</script>
+	<!--不限部位-->
+	<script type="text/html" id="tplArea">
+		{{each obj as item}}
+		  <li class="clearfix" areaId="{{item.categoryID}}"><a href='javascript:;'>{{item.categoryType}}<span class="fr hide">✔</span></a></li>
+		{{/each}}
+	</script>
+	<!--不限器械-->
+	<script type="text/html" id="qixie">
+		{{each obj as item}}
+		  <li class="clearfix" qixieId="{{item.categoryID}}"><a href='javascript:;'>{{item.categoryType}}<span class="fr hide">✔</span></a></li>
+		{{/each}}
+	</script>
+	<!--不限难度-->
+	<script type="text/html" id="nandu">
+		{{each obj as item}}
+		   <li class="clearfix" nanduId="{{item.categoryID}}"><a href='javascript:;'>{{item.categoryType}}<span class="fr hide">✔</span></a></li>
+		{{/each}}
+	</script>
+	<script id="tplProducts" type="text/html">
+   {{each obj as item}}
+      <li class="product">
+		  <a href='lesson_info.html?title={{item.title}}?drysalteryID={{item.drysalteryID}}'>
+			<div class="img">
+				<img src='http://www.mffive.com:8080{{item.picUrl}}' alt="">
+			</div>
+			<p class="one">{{item.title}}</p>
+			<p class="two">{{item.level}}</p>
+			<p class="three">{{item.likeCount}}</p>
+		  </a>
+      </li>
+   {{/each}}
+  </script>
+  <script>
+  $(".navWrap ul li a").click(function(){
+  	$(this).css("color","#F8E71C").parent("li").siblings('li').children('a').css("color","#9B9B9B");
+  });
+  </script>
+</body>
+</html>

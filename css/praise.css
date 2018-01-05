@@ -1,0 +1,48 @@
+body{
+	background-color: #F2F2F2;
+}
+/* 赞的列表 */
+ul.praise{
+	background-color: #fff;
+	margin-top: 3rem;
+}
+ul.praise li{
+	width: 100%;
+	height: 4rem;
+	border-bottom: 0.5px solid #F2F2F2;
+
+}
+ul.praise>li>.left{
+	float: left;
+	width: 17%;
+	height: 100%;
+	padding: 0.5rem;
+}
+ul.praise>li>.left>img{
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+ul.praise>li>.middle{
+	float: left;
+	width: 57%;
+	height: 100%;
+	font-size: 1.2rem;
+	line-height: 4rem;
+}
+ul.praise>li>.right{
+	float: right;
+	width: 26%;
+	height: 100%;
+}
+ul.praise>li>.right>button{
+	height: 2rem;
+	width: 5rem;
+	font-size: 0.8rem;
+	border-radius: 10rem;
+	border: none;
+	outline: none;
+	margin-top: 1rem;
+	background-color: #F8E71C;
+	color: #fff;
+}

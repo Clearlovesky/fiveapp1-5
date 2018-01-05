@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<title>干货-课程</title>
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/lesson.css">
+	<style>.nav{border: none;}</style>
+</head>
+<body>
+	<header>
+		<div class="left">
+			<a href="javascript:history.go(-1)"><img src="images/ico_back@3x.png" height="16"alt=""></a>
+		</div>
+		<div class="middle">全部课程</div>
+	</header>
+	<!--导航栏-->
+    <div class="nav">
+        
+    </div>
+	<!-- 视频教程列表 -->
+	<ul class="list2 products">
+		<!--<li>
+		  <div class="img"><img src="images/6.bmp" alt=""></div>
+			<p class="one">胸肌入门</p>
+			<p class="two">3分钟 初级</p>
+			<p class="three">66666 人已参加</p>
+		</li>-->
+	</ul>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/template.js"></script>
+	<script src="js/lesson.js"></script>
+	<script id="tplProducts" type="text/html">
+   {{each obj as item}}
+      <li class="product">
+		  <a href='lesson_info.html?title={{item.title}}?drysalteryID={{item.drysalteryID}}'>
+			<div class="img">
+				<img src='http://www.mffive.com:8080{{item.picUrl}}' alt="">
+			</div>
+			<p class="one">{{item.title}}</p>
+			<p class="two">{{item.level}}</p>
+			<p class="three">{{item.likeCount}}</p>
+		  </a>
+      </li>
+   {{/each}}
+  </script>
+  <script>
+  $(".navWrap ul li a").click(function(){
+  	$(this).css("color","#F8E71C").parent("li").siblings('li').children('a').css("color","#9B9B9B");
+  });
+  </script>
+</body>
+</html>

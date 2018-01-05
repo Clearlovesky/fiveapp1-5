@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<title>搜索</title>
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/drysaltery_search.css">
+</head>
+<body>
+	<header>
+		  <input id="idNumber1" type="text" placeholder="搜索课程、话题、饮食">
+		  <a class="goback" href="javascript:history.go(-1)"><img src="images/ico_back@3x.png" height="16"alt=""></a>
+		  <button id="search">搜索</button>
+	</header>
+	<div class="delete history"></div>
+	<div class="history" id="his-dele">清空历史记录</div>
+		<!--清空历史记录-->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script>
+		$(document).delegate(".delete>div", "click", function() {
+				$("#idNumber1").val($(this).text());
+			});
+			/*搜索记录相关*/
+			//从localStorage获取搜索时间的数组
+			var hisTime;
+			//从localStorage获取搜索内容的数组
+			var hisItem;
+			//从localStorage获取最早的1个搜索时间
+			var firstKey;
+
+			function init() {
+				//每次执行都把2个数组置空
+				hisTime = [];
+				hisItem = [];
+				//模拟localStorage本来有的记录
+				//localStorage.setItem("a",12333);
+				//本函数内的两个for循环用到的变量
+				var i = 0
+				for(; i < localStorage.length; i++) {
+					if(!isNaN(localStorage.key(i))) {
+						hisItem.push(localStorage.getItem(localStorage.key(i)));
+						hisTime.push(localStorage.key(i));
+					}
+				}
+				i = 0;
+				//执行init(),每次清空之前添加的节点
+				$(".delete").html("");
+				for(; i < hisItem.length; i++) {
+					//alert(hisItem);
+					$(".delete").prepend('<div class="word-break">' +'<img src="images/search.png">&nbsp;&nbsp;'+ hisItem[i] + '</div>')
+				}
+			}
+			init();
+
+			$("#search").click(function() {
+				var value = $("#idNumber1").val();
+				var time = (new Date()).getTime();
+
+				if(!value) {
+					alert("请输入搜索内容");
+					return false;
+				}
+
+				//输入的内容localStorage有记录
+				if($.inArray(value, hisItem) >= 0) {
+					for(var j = 0; j < localStorage.length; j++) {
+						if(value == localStorage.getItem(localStorage.key(j))) {
+							localStorage.removeItem(localStorage.key(j));
+						}
+					}
+					localStorage.setItem(time, value);
+				}
+				//输入的内容localStorage没有记录
+				else {
+					//由于限制了只能有6条记录，所以这里进行判断
+					if(hisItem.length > 5) {
+						firstKey = hisTime[0]
+						localStorage.removeItem(firstKey);
+						localStorage.setItem(time, value);
+					} else {
+						localStorage.setItem(time, value)
+					}
+				}
+				init();
+				//正式的时候要提交的！！！
+				//$("#form1").submit()
+
+			});
+
+			//清除记录功能
+			$("#his-dele").click(function() {
+				var f = 0;
+				for(; f < hisTime.length; f++) {
+					localStorage.removeItem(hisTime[f]);
+				}
+				init();
+			});
+			//苹果手机不兼容出现input无法取值以下是解决方法
+			$(function() {
+				$('.word-break').click(function() {
+					var div = $(this).text();
+					$('#idNumber1').val(div);
+				})
+				//取到值以后button存储无法取值，这里强迫浏览器强行刷新可解决
+				$('#search').click(function() {
+					window.location.reload();
+				})
+			})
+	</script>
+</body>
+</html>

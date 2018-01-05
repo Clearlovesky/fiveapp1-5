@@ -1,0 +1,228 @@
+
+.swiper-container-k{
+	width: 100%;
+	height: 180%;
+}
+.model-1{
+	color: #4A4A4A;
+	width: 100%;
+	height: 36%;
+	background-color: #F8E71C;
+	position: relative;
+}
+.model-1 .left{
+	float: left;
+	width: 3rem;
+	height: 3rem;
+	/* background-color: #ccc; */
+	/* margin-top: 2.5rem; */
+	/* margin-left: 2.3rem; */
+}
+.model-1 .left img,.model-1 .right img{
+	width: 1rem;
+	height: 1rem;
+	margin: 1.3rem 1rem;
+}
+.model-1 .left>a{
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+}
+.model-1 .right img{
+	float: right;
+}
+.model-1 .right{
+	float: right;
+	width: 3rem;
+	height: 3rem;
+	/* background-color: #ccc; */
+	/* margin-top: 2.5rem; */
+	/* margin-right: 2.3rem; */
+}
+.model-1 .middle{
+	border-radius: 6px;
+	height: 55%;
+	width: 93%;
+	background-color: #fff;
+	position: absolute;
+	top: 8px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	box-shadow: 0px 2px 4px #888888;
+}
+/* table导航点  */
+.swiper-pagination-k{
+	text-align: center;
+	margin-top: -30%;
+}
+.swiper-pagination-k .swiper-pagination-bullet{
+	width: 6px;
+	height: 6px;
+	margin: 0 0.3rem;
+}
+.swiper-pagination-bullet-active{
+	background-color: #F8E71C !important;
+}
+.model-1 .middle h1{
+	font-size: 1.5rem;
+	text-align: center;
+	line-height: 5rem;
+}
+.model-1 .m-left>ul>li{
+	width: 33.33333%;
+	height: 4rem;
+	float: left;
+	/* background-color: pink; */
+	text-align: center;
+	/* margin-bottom: 4rem; */
+}
+.model-1 .m-left>ul>li>h2{
+	font-size: 1.3rem;
+	/* line-height: 6rem; */
+}
+.model-1 .m-left>ul>li>p{
+	font-size: 0.8rem;
+	color: #9B9B9B;
+}
+.model-1 .middle>h3{
+	font-size: 0.8rem;
+	margin-left: 1rem;
+	/* line-height: 3.4rem; */
+}
+.model-1 .middle>h3>span{
+	float: right;
+	margin-right: 1rem;
+}
+/* 底部模块  */
+.model-2{
+	width: 100%;
+	height: 30%;
+	/* background-color: pink; */
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+}
+.model-2>p{
+	font-size: 1rem;
+	margin-bottom: 3rem;
+}
+
+.model-2 button{
+	width: 14rem;
+	height: 2.5rem;
+	background-color: #F8E71C;
+	font-size: 1rem;
+	color: #fff;
+	border-radius: 3rem;
+	border: none;
+	outline: none;
+	margin-top: 4rem;
+}
+/*进度条-------------*/
+/* ul.lanren,ul.lanren>li{
+	width: 100%;
+} */
+.scale_panel{
+	width: 76%;
+  color:#999;
+  position:absolute;
+  line-height:18px;
+  left:45px;top:-0px;
+  border-radius: 1rem;
+}
+.scale_panel>span:first-child{
+  position: absolute;
+  left: -2rem;
+  top: -0.25rem;
+  font-size: 0.8rem;
+}
+.scale_panel>span:nth-child(2){
+  position: absolute;
+  right: -2rem;
+  top: -0.25rem;
+  font-size: 0.8rem;
+}
+/* 进度条拖动的小圆圈 */
+.scale>span{
+  background-image: url(../images/干货切图/ico_huadong@3x.png); 
+  -webkit-background-size: cover;
+  background-size: cover;
+  width:1.5rem;
+  height:1.5rem;
+  position:absolute;
+  left:-2px;top:-9px;
+  cursor:pointer;
+  border-radius: 50%;
+  font-size: 1rem;
+}
+.scale{
+  background-repeat: repeat-x; 
+  background-position: 0 100%; 
+  background-image: linear-gradient(to right,#08D7F2 0%,#2BF06A 50%,#2BF06A 50%,#FC6076 100%); 
+  border-left: 1px #83BBD9 solid;  
+  width: 100%; 
+  height: 0.4rem; 
+  position: relative; 
+  font-size: 0px; 
+  border-radius: 2rem; 
+}
+.scale>div{ 
+	background-image: linear-gradient(to right,#08D7F2 0%,#2BF06A 50%,#2BF06A 50%,#FC6076 100%); 
+	opacity: 0.5;
+  background-repeat: repeat-x; 
+  width: 0px; 
+  position: absolute; 
+  height: 0.4rem; 
+  width: 0; left: 0; bottom: 0; 
+  border-radius: 2rem;
+}
+.lanren>li{
+  position:relative;
+  list-style:none;
+  font-size: 1rem;
+}
+#title{
+  position: absolute;
+  top: -2rem;
+  left: 47%;
+}
+
+/* 分享模态框 */
+.share{
+	width: 100%;
+	height: 100%;
+	background-color: #00000054;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	display: none;
+}
+.share>ul{
+	width: 100%;
+	height:32%;
+	background-color: #fff;
+	position: absolute;
+	bottom: -27%;
+	left: 0;
+	z-index: 100000;
+	transition:all 0.2s;
+}
+.share>ul>li{
+	width: 15%;
+	height: 38%;
+	float: left;
+	margin: 1rem 1.2rem 0 1rem;
+	text-align: center;
+}
+.share>ul>li>img{
+	width: 2.8rem;
+}
+.share>ul>li>span{
+	font-size: 0.8rem;
+	color: #393939;
+	font-family: "HelveticaNeue";
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<title>干货-课程-详情-赞</title>
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/praise.css">
+</head>
+<body>
+	<header>
+		<div class="left">
+			<a href="javascript:history.go(-1)"><img src="images/ico_back@3x.png" height="16"alt=""></a>
+		</div>
+		<div class="middle">赞</div>
+	</header>
+	<!-- 赞的列表 -->
+	<ul class="praise">
+		<li>
+			<div class="left"><img src="images/6.bmp" alt=""></div>
+			<div class="middle">强哥打鼓</div>
+			<div class="right">
+				<button class="yellow">+ 关注</button>
+			</div>
+		</li>
+		<li>
+			<div class="left"><img src="images/6.bmp" alt=""></div>
+			<div class="middle">强哥打鼓</div>
+			<div class="right">
+				<button class="yellow">+ 关注</button>
+			</div>
+		</li>
+	</ul>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script>
+	 //  var job=0;
+		// $("button").on("touchstart",function(){
+		// 	if(job == 0){
+		// 		$(this).css("background-color","#ccc");
+		// 		$(this).text("互相关注");
+		// 		job=1;
+		// 	}else{
+		// 		$(this).css("background-color","#F8E71C");
+		// 		$(this).text("+ 关注");
+		// 		job=0;
+		// 	}
+		// })
+
+		$("button").on("touchstart",function(){
+			if($(this).hasClass('yellow')){
+				$(this).removeClass("yellow");
+				$(this).css("background-color","#ccc");
+				$(this).text("互相关注");
+			}else{
+				$(this).addClass("yellow");
+				$(this).css("background-color","#F8E71C");
+				$(this).text("+ 关注");
+			}
+		})
+	</script>
+</body>
+</html>
